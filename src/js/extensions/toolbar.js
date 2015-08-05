@@ -212,11 +212,8 @@ var Toolbar;
             // Handle mouseup on document for updating the selection in the toolbar
             this.on(this.document.documentElement, 'mouseup', this.handleDocumentMouseup.bind(this));
 
-            // Add a scroll event for sticky toolbar
-            if (this.static && this.sticky) {
-                // On scroll (capture), re-position the toolbar
-                this.on(this.window, 'scroll', this.handleWindowScroll.bind(this), true);
-            }
+            // On scroll (capture), re-position the toolbar
+            this.on(this.window, 'scroll', this.handleWindowScroll.bind(this), true);
 
             // On resize, re-position the toolbar
             this.on(this.window, 'resize', this.handleWindowResize.bind(this));
