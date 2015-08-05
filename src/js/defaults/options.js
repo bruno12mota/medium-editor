@@ -11,8 +11,8 @@ var editorDefaults;
         disableEditing: false,
         autoLink: false,
         elementsContainer: false,
-        contentWindow: window,
-        ownerDocument: document,
+        contentWindow: typeof window === 'undefined' ? false : window,
+        ownerDocument: typeof document === 'undefined' ? false : document,
         targetBlank: false,
         extensions: {},
         spellcheck: true
