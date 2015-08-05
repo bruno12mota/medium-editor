@@ -12,7 +12,7 @@
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
 
 // Full polyfill for browsers with no classList support
-if (!("classList" in document.createElement("_"))) {
+if (typeof document !== 'undefined' && !("classList" in document.createElement("_"))) {
   (function (view) {
 
   "use strict";
